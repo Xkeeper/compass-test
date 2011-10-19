@@ -23,6 +23,7 @@
     text-align:center;
     background-color: #cccccc;
     border-bottom:1px solid;
+    padding:10px 0 0;
   }
   #sidebar {
    text-align:center;
@@ -33,5 +34,8 @@
     @include column(24); }
   #content {
     padding:10px;
-    @include column(5, true); }
+    @include column(5, true);
+    @include prepend(4);
+    position:relative;
+    margin: 0 auto; }
 }
