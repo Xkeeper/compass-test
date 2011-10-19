@@ -1,0 +1,10 @@
+= form_for @mydisk do |f|
+  -if @mydisk.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@mydisk.errors.count, "error")} prohibited this mydisk from being saved:"
+      %ul
+        - @mydisk.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'

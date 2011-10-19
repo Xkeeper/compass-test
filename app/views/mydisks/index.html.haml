@@ -1,0 +1,17 @@
+%h1 Listing mydisks
+
+%table
+  %tr
+    %th
+    %th
+    %th
+
+  - @mydisks.each do |mydisk|
+    %tr
+      %td= link_to 'Show', mydisk
+      %td= link_to 'Edit', edit_mydisk_path(mydisk)
+      %td= link_to 'Destroy', mydisk, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Mydisk', new_mydisk_path
